@@ -1,51 +1,48 @@
-# Gothaj Next Gen
-
-Custom Minecraft client built primarily in **Java** with additional **C++ components** for performance and extended functionality. The project was developed and maintained long-term, reached **100,000+ downloads**, and maintains around **~100 daily active users**.
-
-> This repository contains the client source code. Please use responsibly and follow the rules of the servers you play on.
-
----
+# Youpah ONE - GEN
 
 ## Overview
-Gothaj Client is a feature-rich Minecraft client focused on modular functionality, performance-oriented development, and maintainable internal architecture. It was developed over multiple years and included coordination of a small development team.
-
----
+YOH-Client is a custom Minecraft 1.8.9 client with an integrated launcher, focused on custom branding, modular architecture, and a seamless user experience. Developed and maintained by Youpah.
 
 ## Key Facts
-- **Role:** Founder / Lead Developer [1]
-- **Timeline:** 2021–2024 [1]
-- **Core tech:** Java + C++ components [1]
-- **Adoption:** 100,000+ downloads, ~100 daily active users [1]
+Role: Founder / Lead Developer
+Version actuelle: 0.17
+Base: Minecraft 1.8.9 (Forge compatible)
+Tech: Java · Gradle · Mixin · Swing
 
----
+- - - -
 
-## Features (High-Level)
-- Modular client feature system (organized by category)
-- Performance-oriented components (C++ where needed)
-- Long-term maintained codebase with real users
+## Features
+Launcher graphique intégré (Swing) avec gestion de comptes, sélecteur de versions et de loaders
+Console intégrée dans le launcher — pas de fenêtre PowerShell visible
+Auto-updater au démarrage (vérification via GitHub Releases API)
+Branding personnalisé : logo Galaxy PvP Pack, écran de chargement YOH-GENS, watermark HUD en jeu
+Support Forge et Vanilla
+Mixin : brand client personnalisé (YOH-Client V0.17)
+Gestion des favoris de version par compte
 
-> If you want this section to be more credible, add concrete items like: event bus, configs, commands, UI, rendering pipeline, etc. (based on what your repo actually contains).
-
----
-
-## Development & Collaboration
-During development, the project involved collaborating with and coordinating a team of **4 developers**, overseeing feature delivery and implementation. [1]
-
----
+- - - -
 
 ## Tech Stack
-- **Java** (primary) [1]
-- **C++** (performance/extended functionality components) [1]
+Java (launcher Swing + client Minecraft)
+Gradle (build system, fat JAR)
+SpongePowered Mixin (injection bytecode)
+Gson (parsing JSON — auto-updater, manifests)
+Getting Started
+Prérequis
+Java 8+
+IntelliJ IDEA (recommandé)
 
----
+- - - -
 
-## Getting Started
-### Prerequisites
-- Java installed (version depends on your setup)
-- A compatible Minecraft development environment for your target version
-- An IDE such as IntelliJ IDEA (recommended)
+## Clone & lancement
 
-### Clone
-```bash
-git clone https://github.com/ScRichard/Gothaj-Next-Gen.git
-cd <REPO_NAME>
+git clone https://github.com/MamyVentouse/YOH-Client.git
+cd YOH-Client
+./gradlew runClient
+
+- - - -
+
+## Build (fat JAR)
+
+./gradlew fatJar
+# → build/libs/YOH-Client-0.17.jar
